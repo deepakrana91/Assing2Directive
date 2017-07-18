@@ -30,9 +30,9 @@
     <br>
     <div class="row">
       <div>
-        <table class="table-bordered" style="margin-left:18px">
+        <table class="table-bordered" style="margin-left:18px" [(ngModel)]="Tindex">
           <tbody>
-            <tr *ngFor="let student of allStudents; let i=index">
+            <tr  *ngFor="let student of allStudents; let i=index" myHighlight [rowindex]="i">
               <td>
                 {{i+1}}
               </td>
@@ -44,10 +44,17 @@
       </div>
     </div>
     <!--<input type="text" [(ngModel)]="title1" *ngIf="isVisible"> -->
-
-    <!-- Logic to display the Array values in a table using a *ngFor Directive -->
-
-    
+   
  
   </div>
+  <script>
+   function myFunction(x) {
+    alert("Cell index is: " + x.cellIndex);
+  }
+  
+  onmouseenter() {
+
+  }
+   </script>
+  
 
